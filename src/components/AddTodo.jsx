@@ -26,7 +26,6 @@ function AddTodo() {
     else {
 
       dispatch(updateTodo({id: updateId,text: input}))
-      console.log(input);
 
       setInput('')
       dispatch(updateVar())
