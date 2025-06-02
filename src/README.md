@@ -18,3 +18,13 @@ A simple React Todo application that uses **Redux Toolkit** for state management
 - TailwindCSS (for styling)
 
 ## 📁 Project Structure
+├── components/
+│ ├── AddTodo.jsx # Form to add or update a todo
+│ └── Todos.jsx # Lists all todos with edit/delete options
+├── features/
+│ └── todo/
+│ └── todoSlice.js # Redux slice managing todo state
+├── app/
+│ └── store.js # Redux store configuration
+├── App.jsx # Main app component
+├── main.jsx # React entry point with Redux provider

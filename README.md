@@ -1,12 +1,42 @@
-# React + Vite
+# React + Vite + Redux Toolkit Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **simple Todo application** built with **React**, **Redux Toolkit**, and **Vite**. It demonstrates how to manage global state using Redux Toolkit and interact with that state through a clean and responsive UI. It also features HMR (Hot Module Replacement) and basic ESLint configuration for better development experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- [React](https://reactjs.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Vite](https://vitejs.dev/)
+- [TailwindCSS](https://tailwindcss.com/) (for utility-first styling)
+- [ESLint](https://eslint.org/) (basic linting setup)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+- ✅ Add todos
+- 🔁 Edit/update existing todos
+- ❌ Delete todos
+- 🔃 Dynamic input placeholder and button text based on app state
+- 🧠 Uses Redux Toolkit with slices and actions
+- ⚡ Fast Refresh with Vite for a snappy development experience
+
+---
+
+## 📁 Project Structure
+.
+├── app/
+│ └── store.js # Redux store setup
+├── components/
+│ ├── AddTodo.jsx # Input form for adding/updating todos
+│ └── Todos.jsx # List view of todos with edit/delete
+├── features/
+│ └── todo/
+│ └── todoSlice.js # Redux slice managing todo logic
+├── App.jsx # Main app component
+├── main.jsx # Entry point; wraps App in Redux Provider
+├── index.css # Global styles (includes Tailwind)
+├── App.css # Local styles (optional)
+└── README.md # Project documentation
