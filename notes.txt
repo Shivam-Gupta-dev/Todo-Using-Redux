@@ -1,0 +1,6 @@
+Redux toolkit
+
+store
+        reducers
+
+useSelector     useDispatch
