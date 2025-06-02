@@ -5,13 +5,14 @@ import { addTodo, updateTodo, setButtonState, updateVar, setplaceholderContent }
 function AddTodo() {
 
   const [input, setInput] = useState('')
+
   const placeholderContent = useSelector(state => state.placeholderContent)
+  const buttonState = useSelector(state => state.buttonState)
+
   const update = useSelector(state => state.update)
   const updateId = useSelector(state => state.updateId)
 
-  const buttonState = useSelector(state => state.buttonState)
   const dispatch = useDispatch()
-  console.log(update,updateId);
   
 
   const addTodoHandler = (e) => {
@@ -19,19 +20,16 @@ function AddTodo() {
 
     if (!update) {
       dispatch(addTodo(input))
-      console.log('if');
 
       setInput('')
     }
     else {
-      console.log('else');
 
       dispatch(updateTodo({id: updateId,text: input}))
       console.log(input);
 
       setInput('')
       dispatch(updateVar())
-      console.log(update);
 
       dispatch(setButtonState('Add Todo'))
       dispatch(setplaceholderContent('Enter a Todo...'))

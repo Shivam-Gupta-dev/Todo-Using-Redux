@@ -1,12 +1,8 @@
-import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeTodo, updateVar, setButtonState, setUpdateId, setplaceholderContent } from '../features/todo/todoSlice'
-import { useState } from 'react'
-
 
 function Todos() {
   const todos = useSelector(state => state.todos)
-  // const [isEditable, setEditable] = useState(useSelector(state => state.update))
   const dispatch = useDispatch()
 
   const update = (id) => {
@@ -29,8 +25,7 @@ function Todos() {
             <div className='text-white'>{todo.text}</div>
             <div className='flex justify-between gap-3'>
               <button
-                 onClick={() => update(todo.id)}
-                // disabled={isEditable}
+                onClick={() => update(todo.id)}
                 className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
               >
                 <svg
@@ -47,9 +42,6 @@ function Todos() {
                     d="M4.5 12a7.5 7.5 0 0112.871-5.303M4.5 12H2.25m2.25 0l-2.25 2.25M19.5 12a7.5 7.5 0 01-12.871 5.303M19.5 12h2.25m-2.25 0l2.25-2.25"
                   />
                 </svg>
-
-
-
               </button>
               <button
                 onClick={() => dispatch(removeTodo(todo.id))}
